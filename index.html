@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/app.css">
+</head>
+<body>
+    <div class="container" id="container">
+        <div class="select">
+        <select id="ddValue" onchange="gridSelected(event)">
+            <option value="" disabled selected>Select your option</option>
+            <option value="2">2X2</option>
+            <option value="4">4X4</option>
+            <option value="6">6X6</option>
+            <option value="8">8X8</option>
+            <option value="10">10X10</option>
+        </select>
+        </div>
+        <section class="score-panel">
+            <div>
+                Stage- <span class="stage">0</span>
+            </div>
+            
+             Move(s)- <span class="moves">0</span>
+            <div class="restart" onclick=reloadGame()>
+                <button><i class="fa fa-repeat"></i></button>
+            </div>
+        </section>
+        <ul class="deck" id="card-deck">
+        </ul>
+        <div id="popup1" class="overlay">
+            <div class="popup">
+                <h2>Congratulations</h2>
+                <a class="close" href=#>×</a>
+                <div class="content-1">
+                    Congratulations you're a winner
+                </div>
+                <div class="content-2">
+                    <p>You made
+                        <span id=finalMove> </span> moves
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="js/app.js"></script>
+</html>
